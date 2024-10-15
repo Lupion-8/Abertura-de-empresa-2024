@@ -19,7 +19,7 @@ section {
 }
 
 .sec-vantag .title h2 {
-    font-size: 21px;
+    font-size: 45px;
     text-align: center;
     text-transform: uppercase;
     color: var(--base1);
@@ -27,27 +27,28 @@ section {
     margin: 15px 0px;
 }
 
-.sec-vantag .title h3{
+.sec-vantag .title h3 {
     text-align: center;
+    font-size: 22px;
+    color: var(--colorNone);
 }
 
 
 .sec-vantag .vanteg-cards {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    margin: 40px 0px;
+    margin: 12px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .sec-vantag .vanteg-card {
-
     background-image: url(./../imgs/logo-azul-opacity_10.png);
     background-repeat: no-repeat;
     background-position-x: -95px;
     background-position-y: 10px;
     background-size: 213px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,28 +56,35 @@ section {
     text-align: center;
     box-shadow: #05084ea3 0px 0px 14px 0px;
     border-radius: 10px;
-    margin: 25px 0px;
+    margin: 20px 20px;
     background-color: var(--base4);
+    width: 15vw;
+    height: 20vw;
 }
 
 .sec-vantag .vanteg-card i {
-    font-size: 38px;
+    font-size: 30px;
     margin: 15px 0px;
     color: var(--base1);
 }
 
 .sec-vantag .vanteg-card span {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--base1);
 }
 
 
 .sec-vantag .vanteg-card p {
-    font-size: 18px;
+    font-size: 15px;
     margin: 15px 0px;
+    color: var(--colorNone);
+    font-weight: bold;
 }
 
+
+
+/*
 @media (min-width: 820px) {
     .sec-vantag .vanteg-card p {
         font-size: 21px;
@@ -175,3 +183,5 @@ section {
     }
 
 }
+
+*/

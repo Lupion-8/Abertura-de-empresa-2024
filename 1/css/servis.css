@@ -22,11 +22,13 @@ body {
     text-transform: uppercase;
     color: var(--base1);
     font-weight: bold;
+    min-height: 100px;
+    /* Garante que o espaço não colapse durante a animação */
 
 }
 
 .sec-servis h2 {
-    font-size: 30px;
+    font-size: 45px;
     margin: 3vw 0px;
 }
 
@@ -35,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0px 35px;
 }
 
 .card-02 {
@@ -84,13 +87,13 @@ body {
     overflow: hidden;
     justify-content: flex-start;
     padding: 0px 1%;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 
 .card-serv2 {
     box-shadow: #0000007a 0px -20px 20px 0px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .card-serv-open {
@@ -157,7 +160,23 @@ body {
         font-size: 18px;
         /* Outros ajustes para telas muito grandes */
     }
+
+    .car-texts1 {
+        height: 44vh;
+    }
+
+    .card-serv-open {
+        height: 38vh;
+    }
 }
+
+@media (max-width: 1340px) {
+    .sec-servis h2 {
+        font-size: 3.2vw;
+    }
+}
+
+
 
 
 @media (max-width: 1230px) {
@@ -172,16 +191,18 @@ body {
     .card-serv-open {
         height: 22vw;
     }
+
     .card-serv-text {
         font-size: 1.55vw;
     }
 
+    .sec-servis .btn_white {
+        font-size: 22px;
+    }
+
 }
 
-@media (max-width: 900px) {
-  
 
-}
 
 /* Para tablets e dispositivos de tamanho médio */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -201,12 +222,14 @@ body {
     }
 
     .sec-servis h2 {
-        font-size: 4vw;
+        font-size: 6.8vw;
     }
 
-    .card-01, .card-02 {
+    .card-01,
+    .card-02 {
         display: none;
     }
+
     .card-serv-mobile.csv-mobile {
         display: flex;
         flex-direction: column;
@@ -216,6 +239,7 @@ body {
         padding: 15px;
         box-shadow: #00000057 -1px 4px 8px 0px;
     }
+
     .card-serv-title {
         font-size: 3.35vw;
     }
@@ -230,21 +254,24 @@ body {
         font-size: 3.25vw;
         text-align: center;
     }
+
     .icons {
         font-size: 10vw;
     }
 
-
-
-
-
-
-
     .sec-servis .btn_white {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
 
+}
+
+
+@media (max-width: 550px) {
+    .sec-servis h2 {
+        font-size: 7.8vw;
+ 
+    }
 }
 
 
@@ -258,6 +285,3 @@ body {
         text-align: center;
     }
 }
-
-
-

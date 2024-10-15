@@ -110,6 +110,16 @@ document.getElementById("particles-1") && particlesJS("particles-1", {
 });
 
 
+//forçar particulas a serem o mesmo tamnho de header
+const div1 = document.querySelector('header');
+const div2 = document.querySelector('.particles');
+
+// Ajustar a altura da Div 2 para corresponder à altura da Div 1
+div2.style.height = div1.offsetHeight + 'px';
+
+//===============================================================================
+
+
 
 $(document).ready(function () {
     $('a.page-scroll').on('click', function (e) {
@@ -121,7 +131,7 @@ $(document).ready(function () {
         if (targetElement.length) {
             $('html, body').animate({
                 scrollTop: targetElement.offset().top // Rolagem suave para a posição do elemento alvo
-            }, 600); // 600 milissegundos de duração
+            }, 400); // 600 milissegundos de duração
         }
     });
 });
@@ -153,6 +163,7 @@ $(window).on('scroll', function (event) {
 
 const icon = document.getElementById('icon');
 const sections = document.querySelectorAll('section, footer');
+let text_anim = false;
 
 function checkSection() {
     // Para cada seção, verifique a sua posição
@@ -172,7 +183,15 @@ function checkSection() {
 
                 gsap.to(".fa-circle-chevron-left", {
                     color: '#01044e',
-                })
+                });
+            }
+            if (section.classList.contains('anim-text')){
+                if(!text_anim){
+                    text_anim = true;
+                    setTimeout(() => {
+                        animateText();
+                    }, 3000);
+                }
             }
         }
     });
@@ -336,7 +355,7 @@ document.querySelector('.cd1').addEventListener('mouseenter', () => {
     cardServ1.forEach(element => {
         element.classList.add('card-serv-open');
     });
-    cardServ2.forEach(element =>{
+    cardServ2.forEach(element => {
         element.classList.remove('card-serv-open');
     });
 });
@@ -346,15 +365,50 @@ document.querySelector('.cd2').addEventListener('mouseenter', () => {
     cardServ2.forEach(element => {
         element.classList.add('card-serv-open');
     });
-    cardServ1.forEach(element =>{
+    cardServ1.forEach(element => {
         element.classList.remove('card-serv-open');
     });
+
 });
 
 
-//forçar particulas a serem o mesmo tamnho de header
-const div1 = document.querySelector('header');
-const div2 = document.querySelector('.particles');
 
-  // Ajustar a altura da Div 2 para corresponder à altura da Div 1
-  div2.style.height = div1.offsetHeight + 'px';
+
+//desescrever texto e reescrever
+const texts = ["Abertura de empresa simples e rápido!", "Transforme sua ideia em realidade."];
+let currentTextIndex = 0;
+const element = document.getElementById('animatedText');
+let index = 0;
+
+function animateText() {
+    eraseText(() => {
+        writeText(() => {
+            // Espera 3 segundos antes de reiniciar a animação com o outro texto
+            setTimeout(() => {
+                currentTextIndex = 1 - currentTextIndex; // Alterna entre 0 e 1
+                animateText();
+            }, 5000);
+        });
+    });
+}
+
+function eraseText(callback) {
+    if (index >= 0) {
+        element.textContent = texts[currentTextIndex].slice(0, index);
+        index--;
+        setTimeout(() => eraseText(callback), 50);
+    } else {
+        index = 0;
+        callback();
+    }
+}
+
+function writeText(callback) {
+    if (index < texts[1 - currentTextIndex].length) {
+        element.textContent += texts[1 - currentTextIndex].charAt(index);
+        index++;
+        setTimeout(() => writeText(callback), 50);
+    } else {
+        callback();
+    }
+}
