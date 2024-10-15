@@ -422,6 +422,14 @@ header form p b {
         top: -206px;
     }
 
+    header .lay-email {
+         width: auto;
+    }
+
+    header .email {
+        width: 100%;
+    }
+
     header .lay_form {
         right: 0px;
         top: 290px;
@@ -430,10 +438,9 @@ header form p b {
     header form input {
         font-size: 1.2rem;
         padding: 5px;
+        width: 100%;
     }
-    header form input {
-        width: 266px;
-    }
+   
 }
 
 @media (max-width: 340px) {
