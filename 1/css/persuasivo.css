@@ -207,6 +207,10 @@ section {
 
 /* Para telas pequenas (celulares) */
 @media (max-width: 768px) {
+    .frame-2 {
+        background-image: url('../imgs/frame-2-phone.png');
+    }
+    
     body {
         font-size: 14px;
         /* Outros ajustes para telas pequenas */
