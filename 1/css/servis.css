@@ -170,6 +170,14 @@ body {
     }
 }
 
+
+
+@media (min-width: 1025px) {
+    .sec-servis  .btn_white {
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 1340px) {
     .sec-servis h2 {
         font-size: 3.2vw;
@@ -257,10 +265,6 @@ body {
 
     .icons {
         font-size: 10vw;
-    }
-
-    .sec-servis .btn_white {
-        font-size: 5vw;
     }
 
 

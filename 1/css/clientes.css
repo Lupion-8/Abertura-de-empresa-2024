@@ -8,6 +8,7 @@
     --textsWhite: #ffffff;
     --colorNone: #4a4a4a;
 }
+
 section {
     padding: 15px;
 }
@@ -107,7 +108,7 @@ section {
 
 .sec-client .client-chamada h2 {
     font-size: 21px;
-    
+
     margin: 15px 0px;
 }
 
@@ -130,71 +131,25 @@ section {
     animation: pulseButton 2s infinite;
     cursor: pointer;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 22px;
     margin: 10px 0px 30px 0px;
 }
 
-@media (min-width: 768px) {
-    .sec-client {
-        padding: 15px 129px;
-    }
 
-    .sec-client .carousel-item img {
-        width: 360px;
-        height: 460px;
-        border-radius: 12px;
-    }
+@media (min-width: 1440px) {}
+
+
+
+@media (min-width: 1025px) {
 
     .sec-client .title h2 {
-        font-size: 25px;
-    }
-
-    .sec-client .carousel-item {
-        flex: 0 0 calc(70% / 3);
-        margin-right: 0px;
-        margin-left: 0px;
-        padding: 30px;
-        border-radius: 25px;
-    }
-
-    .sec-client .client-chamada h2 {
-        font-size: 25px;
-    }
-
-    .sec-client .client-chamada span {
-        font-size: 22px;
-    }
-
-    .sec-client .btn_white {
-        font-size: 23px;
-    }
-
-}
-
-@media (min-width: 1024px) {
-    .sec-client .carousel-item {
-        flex: 0 0 calc(52% / 3);
-    }
-
-
-    .sec-client .carousel-item img {
-        width: 460px;
-        height: 586px;
-    }
-}
-
-
-@media (min-width: 1024px) and (max-height: 800px) {
-
-    
-
-    .sec-client .title h2 {
-        font-size: 30px;
+        font-size: 3.2vw;
     }
 
     .sec-client .carousel-item img {
         width: 260px;
         height: 336px;
+        border-radius: 10px;
     }
 
     .sec-client .carousel-items {
@@ -205,7 +160,10 @@ section {
     }
 
     .sec-client .carousel-item {
-        flex: 0 0 calc(100% / 3);
+        margin-right: 0vw;
+        margin-left: 0vw;
+        padding: 2vw;
+        border-radius: 10px;
     }
 
     .sec-client .carousel-prev,
@@ -231,14 +189,91 @@ section {
         overflow-x: hidden;
     }
 
-}
-
-@media (min-width: 1358px) {
-    .sec-client .carousel-item {
-        padding: 20px;
+    .sec-client .client-chamada h2 {
+        font-size: 28px;
+        color: var(--colorNone);
     }
 
-    .sec-client .btn_white {
-        font-size: 16px;
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 23px;
+    }
+
+
+
+}
+
+@media (max-width: 1025px) {
+    .sec-client .title h2 {
+        font-size: 3.2vw;
+    }
+
+    .sec-client .carousel-item img {
+        width: 34vw;
+        height: 43.499vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-item {
+
+        margin-right: 0vw;
+        margin-left: 0vw;
+
+        padding: 1vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-items {
+        width: 107vw;
+    }
+
+    .sec-client .client-chamada h2 {
+        font-size: 30px;
+        color: var(--colorNone);
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .sec-client .title h2 {
+        font-size: 6.8vw;
+    }
+
+    .sec-client .carousel-item img {
+        width: 323px;
+        height: 398.499px;
+        border-radius: 10px;
+    }
+
+    .sec-client .client-chamada h2 {
+        font-size: 25px;
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .sec-client .carousel-item {
+        margin-right: 2vw;
+    }
+
+
+    .sec-client .client-chamada h2 {
+        font-size: 22px;
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 17px;
     }
 }

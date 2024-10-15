@@ -51,7 +51,7 @@ section {
     animation: pulseButton 2s infinite;
     cursor: pointer;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 22px;
     margin: 10px 0px 30px 0px;
 
 }
@@ -263,7 +263,6 @@ section {
     }
 
     .sec-persuasivo .btn_white {
-        font-size: 5vw;
         margin: 74px 0px 30px 0px;
     }
 }
