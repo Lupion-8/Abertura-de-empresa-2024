@@ -100,7 +100,7 @@ img.frame1 {
 h1,
 h1 span {
     font-size: 3.5vw;
-    width: 37vw;
+    width: auto;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
@@ -247,7 +247,7 @@ header form p b {
     h1,
     h1 span {
         font-size: 45px;
-        width: 600px;
+        
     }
 
     header h2 {
@@ -340,7 +340,7 @@ header form p b {
     h1,
     h1 span {
         font-size: 3.9vw;
-        width: 55vw;
+       
     }
 
     header h2 {
@@ -377,8 +377,8 @@ header form p b {
 
     h1,
     h1 span {
-        font-size: 35px;
-        width: 440px;
+        font-size: 30px;
+       
     }
 
     header h2 {
@@ -413,7 +413,7 @@ header form p b {
     h1,
     h1 span {
         font-size: 2rem;
-        width: 440px;
+        
     }
 
     img.frame1 {
@@ -437,7 +437,6 @@ header form p b {
     h1,
     h1 span {
         font-size: 1.5rem;
-        width: 275px;
     }
     header form input {
         font-size: 1rem;

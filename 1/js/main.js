@@ -239,7 +239,7 @@ setTimeout(() => {
     letrinhaBonitinhaAnimada();
 }, 1000);
 
-//alert("Largura da página: " + document.documentElement.clientWidth + "px, Altura da página: " + document.documentElement.clientHeight + "px");
+alert("Largura da página: " + document.documentElement.clientWidth + "px, Altura da página: " + document.documentElement.clientHeight + "px");
 
 function mostrarLogin() {
     //document.getElementById('overlay').style.display = 'block'; // Exibe o fundo
