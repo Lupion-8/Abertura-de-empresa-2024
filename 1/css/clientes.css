@@ -246,8 +246,8 @@ section {
     }
 
     .sec-client .carousel-item img {
-        width: 323px;
-        height: 398.499px;
+        width: 70vw;
+        height: 88vw;
         border-radius: 10px;
     }
 
@@ -259,13 +259,16 @@ section {
     .client-chamada span b {
         font-size: 18px;
     }
+
+    .sec-client .carousel-item {
+        margin-right: 5vw;
+        margin-left: 15vw;
+    }
 }
 
 
 @media (max-width: 550px) {
-    .sec-client .carousel-item {
-        margin-right: 2vw;
-    }
+    
 
 
     .sec-client .client-chamada h2 {
