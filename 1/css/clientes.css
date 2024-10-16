@@ -280,3 +280,16 @@ section {
         font-size: 17px;
     }
 }
+
+@media (max-width:550px) {
+    .sec-client .carousel-item img {
+        width: 80vw;
+        height: 98vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-item {
+        margin-right: 5vw;
+        margin-left: 4vw;
+    }
+}
