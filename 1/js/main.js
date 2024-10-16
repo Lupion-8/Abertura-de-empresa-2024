@@ -206,9 +206,11 @@ document.querySelector('.wapp').addEventListener('click', () => {
 
 
 
+/*
 document.querySelector('header form input[type="submit"] ').addEventListener('click', (event) => {
     event.preventDefault();  // Impede o envio do formulário
     const n = document.querySelector('.name').value
+    const t = document.querySelector('.telefone').value
     const e = document.querySelector('.email').value
     if (n.length > 1 && e.length > 5) {
         window.location.assign('/successful');
@@ -217,6 +219,7 @@ document.querySelector('header form input[type="submit"] ').addEventListener('cl
     }
 
 });
+*/
 
 
 setTimeout(() => {
@@ -320,7 +323,7 @@ ajustBtns(); // Chamada inicial para configurar os eventos corretamente ao carre
 
 
 
-
+//carroceu
 const carouselItems = document.querySelector(".carousel-items")
     , prevButton = document.querySelector(".carousel-prev")
     , nextButton = document.querySelector(".carousel-next");
@@ -412,6 +415,7 @@ function writeText(callback) {
         callback();
     }
 }
+//===============================================================================\\
 
 
 
@@ -441,4 +445,19 @@ telef.forEach(element => {
         this.value = e
     }
     ));
+});
+//=================================================================================================================//
+
+const forms = document.querySelectorAll('form');
+forms.forEach(form => {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const formulario = Object.fromEntries(formData.entries()); // Converte FormData para um objeto simples
+
+        const formId = form.id; // Pega o id do formulário
+        console.log(formulario);
+
+        window.location.assign('/successful');
+    });
 });

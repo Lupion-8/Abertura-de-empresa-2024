@@ -10,6 +10,12 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-size: 16px;
+    background-color: #f0f0f0;
+    /* Outros estilos globais */
+}
+
 :root {
     --base1: #01044e;
     --base3: #ed8534;
