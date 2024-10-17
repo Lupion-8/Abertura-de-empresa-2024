@@ -332,3 +332,30 @@ span.code {
     }
 
 }
+
+ /* Adiciona um estilo básico à notificação */
+ .cookie-notification {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    display: none; /* Começa oculto */
+  }
+
+  .cookie-notification button {
+    background-color: #00b300;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .cookie-notification button:hover {
+    background-color: #009900;
+  }

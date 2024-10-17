@@ -466,3 +466,29 @@ forms.forEach(form => {
 function cbOrbt(){
     window.location.assign('./successful');
 }
+
+function mostrarNotificacaoDeCookie() {
+    // Verifica se o cookie já foi aceito
+    if (!document.cookie.split('; ').find(row => row.startsWith('cookieAceito=true'))) {
+      // Cria o elemento da notificação
+      const notificacao = document.createElement('div');
+      notificacao.classList.add('cookie-notification');
+      notificacao.innerHTML = `
+        Utilizamos apenas cookies essenciais para melhorar sua experiência e garantir o bom funcionamento deste site. Ao prosseguir, você concorda com o uso de cookies.
+        <button id="aceitarCookies">Aceitar</button>
+      `;
+
+      // Adiciona a notificação ao body
+      document.body.appendChild(notificacao);
+      notificacao.style.display = 'block';
+
+      // Quando o usuário clicar no botão "Aceitar"
+      document.getElementById('aceitarCookies').addEventListener('click', function() {
+        // Armazena um cookie indicando que o usuário aceitou
+        document.cookie = "cookieAceito=true; max-age=31536000; path=/"; // Expira em 1 ano
+        // Remove a notificação
+        notificacao.style.display = 'none';
+      });
+    }
+  }
+  mostrarNotificacaoDeCookie();
