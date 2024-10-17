@@ -448,7 +448,7 @@ telef.forEach(element => {
 });
 //=================================================================================================================//
 
-const forms = document.querySelectorAll('form');
+/*const forms = document.querySelectorAll('form');
 forms.forEach(form => {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -461,3 +461,8 @@ forms.forEach(form => {
         window.location.assign('/successful');
     });
 });
+*/
+
+function cbOrbt(){
+    window.location.assign('./successful');
+}
