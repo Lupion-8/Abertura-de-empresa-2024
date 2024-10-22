@@ -1,0 +1,46 @@
+@media (min-width: 1366px) {
+    /*------------header------------*/
+    .esquerdo, .direito {
+        padding: 0px 50px;
+    }
+    
+    img.frame1 {
+        width: 652px;
+        top: 74px;
+    }
+    
+    .esquerdo{
+        gap: 30px;
+    }
+    
+    h1, h1 span{
+        font-size: 40px;
+
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+    
+    form{
+        gap: 10px;
+    }
+    
+    .name-email-layer {
+
+        gap: 10px;
+    }
+    
+    .lay-email {
+        gap: 10px;
+    }
+    
+    header form input {
+        padding: 05px;
+        border-radius: 3px;
+        font-size: 18px;
+        width: 200px;
+    }
+    /*=============================*/
+    
+}

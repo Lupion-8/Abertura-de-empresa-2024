@@ -1,0 +1,295 @@
+:root {
+    --base1: #01044e;
+    --base3: #ed8534;
+    --base4: #ffffff;
+    --base5: #000000;
+    --base6: #d9d8d5;
+    --base7: #fdbe01;
+    --textsWhite: #ffffff;
+    --colorNone: #4a4a4a;
+}
+
+section {
+    padding: 15px;
+}
+
+
+.sec-client {
+    background-image: url('./../imgs/bg-02.png');
+    background-size: cover;
+}
+
+
+.sec-client .title h2 {
+    font-size: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--base1);
+}
+
+/*============carro===========*/
+.sec-client .carousel-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw;
+}
+
+.sec-client .carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 3vw;
+    color: rgb(20 32 106);
+    visibility: hidden;
+}
+
+.sec-client .carousel {
+    width: 100%;
+    overflow-x: scroll;
+    left: 1vw;
+    position: relative;
+}
+
+.sec-client .carousel-items {
+    display: flex;
+    transition: transform .3s ease-in-out;
+    width: 200vw;
+    align-items: center;
+}
+
+.sec-client .carousel-item {
+    flex: 0 0 calc(100% / 3);
+    margin-right: 9vw;
+    margin-left: -2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw;
+    border-radius: 2.5vw;
+}
+
+
+.sec-client .carousel-item img {
+    width: 87vw;
+    height: 112.499vw;
+    border-radius: 2vw;
+    box-shadow: #00000047 0 0 7px;
+}
+
+
+.sec-client .carousel-item {
+    flex: 0 0 calc(100% / 3);
+    margin-right: 9vw;
+    margin-left: -2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vw;
+    border-radius: 2.5vw;
+}
+
+/*-------------------------------------*/
+
+.sec-client .client-chamada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.sec-client .client-chamada h2 {
+    font-size: 21px;
+
+    margin: 15px 0px;
+}
+
+.sec-client .lay_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.sec-client .btn_white {
+    transition: 500ms;
+    background-color: var(--base1);
+    color: var(--textsWhite);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    animation: pulseButton 2s infinite;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 10px 0px 30px 0px;
+}
+
+
+@media (min-width: 1440px) {}
+
+
+
+@media (min-width: 1025px) {
+
+    .sec-client .title h2 {
+        font-size: 3.2vw;
+    }
+
+    .sec-client .carousel-item img {
+        width: 260px;
+        height: 336px;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-items {
+        display: flex;
+        transition: transform .3s ease-in-out;
+        width: 645px;
+        align-items: center;
+    }
+
+    .sec-client .carousel-item {
+        margin-right: 0vw;
+        margin-left: 0vw;
+        padding: 2vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-prev,
+    .carousel-next {
+        top: 50%;
+        position: relative;
+        padding: 5px;
+        font-size: 43px;
+        cursor: pointer;
+        visibility: visible;
+        right: 0px;
+    }
+
+    .sec-client .carousel-prev {
+        transform: translateY(-50%) rotate(90deg);
+    }
+
+    .sec-client .carousel-next {
+        transform: translateY(-50%) rotate(270deg);
+    }
+
+    .sec-client .carousel {
+        overflow-x: hidden;
+    }
+
+    .sec-client .client-chamada h2 {
+        font-size: 28px;
+        color: var(--colorNone);
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 23px;
+    }
+
+
+
+}
+
+@media (max-width: 1025px) {
+    .sec-client .title h2 {
+        font-size: 3.2vw;
+    }
+
+    .sec-client .carousel-item img {
+        width: 34vw;
+        height: 43.499vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-item {
+
+        margin-right: 0vw;
+        margin-left: 0vw;
+
+        padding: 1vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-items {
+        width: 107vw;
+    }
+
+    .sec-client .client-chamada h2 {
+        font-size: 30px;
+        color: var(--colorNone);
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .sec-client .title h2 {
+        font-size: 6.8vw;
+    }
+
+    .sec-client .carousel-item img {
+        width: 70vw;
+        height: 88vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .client-chamada h2 {
+        font-size: 25px;
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 18px;
+    }
+
+    .sec-client .carousel-item {
+        margin-right: 5vw;
+        margin-left: 15vw;
+    }
+}
+
+
+@media (max-width: 550px) {
+    
+
+
+    .sec-client .client-chamada h2 {
+        font-size: 22px;
+    }
+
+    .client-chamada span,
+    .client-chamada span b {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:550px) {
+    .sec-client .carousel-item img {
+        width: 80vw;
+        height: 98vw;
+        border-radius: 10px;
+    }
+
+    .sec-client .carousel-item {
+        margin-right: 5vw;
+        margin-left: 4vw;
+    }
+}

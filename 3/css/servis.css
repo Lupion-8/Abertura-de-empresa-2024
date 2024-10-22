@@ -1,0 +1,285 @@
+:root {
+    --base1: #01044e;
+    --base3: #ed8534;
+    --base4: #ffffff;
+    --base5: #000000;
+    --base6: #d9d8d5;
+    --base7: #fdbe01;
+    --textsWhite: #ffffff;
+    --colorNone: #4a4a4a;
+}
+
+/* Estilos padrão (aplicados em todos os dispositivos) */
+
+.sec-servis h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--base1);
+    font-weight: bold;
+    min-height: 100px;
+    /* Garante que o espaço não colapse durante a animação */
+
+}
+
+.sec-servis h2 {
+    font-size: 45px;
+    margin: 3vw 0px;
+}
+
+.card-01,
+.card-02 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 35px;
+}
+
+.card-02 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 0px 11%;
+    width: 90%;
+}
+
+.icons {
+    font-size: 50px;
+    z-index: 0;
+    padding: 0.5vw;
+    color: var(--base1);
+}
+
+.car-texts1 {
+    display: flex;
+    flex-direction: row;
+    height: 36vh;
+}
+
+.car-texts2 {
+    display: flex;
+    flex-direction: row;
+    height: 0vh;
+    align-items: flex-end;
+}
+
+
+.card-serv1,
+.card-serv2 {
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    margin: 0% 5%;
+    box-shadow: #0000007a 0px 20px 20px 0px;
+    height: 0vh;
+    overflow: hidden;
+    justify-content: flex-start;
+    padding: 0px 1%;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.card-serv2 {
+    box-shadow: #0000007a 0px -20px 20px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card-serv-open {
+    height: 30vh;
+
+}
+
+.mss {
+    position: absolute;
+    width: 88%;
+    height: 10vh;
+    z-index: 1;
+}
+
+.img1 {
+    background-color: #01044e17;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-serv-title {
+    font-size: 1.35vw;
+    margin: 1vw 0px;
+    font-weight: bold;
+}
+
+.card-serv-text {
+    font-size: 1.25vw;
+}
+
+.sec-servis .lay_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+
+.sec-servis .btn_white {
+    transition: 500ms;
+    background-color: var(--base1);
+    color: var(--textsWhite);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    animation: pulseButton 2s infinite;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 80px 0px 30px 0px;
+}
+
+.card-serv-mobile.csv-mobile {
+    display: none;
+}
+
+
+/* Para telas muito grandes (monitores ultrawide, 4K, etc.) */
+@media (min-width: 1440px) {
+    body {
+        font-size: 18px;
+        /* Outros ajustes para telas muito grandes */
+    }
+
+    .car-texts1 {
+        height: 44vh;
+    }
+
+    .card-serv-open {
+        height: 38vh;
+    }
+}
+
+
+
+@media (min-width: 1025px) {
+    .sec-servis  .btn_white {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1340px) {
+    .sec-servis h2 {
+        font-size: 3.2vw;
+    }
+}
+
+
+
+
+@media (max-width: 1230px) {
+    .card-serv-title {
+        font-size: 1.8vw;
+    }
+}
+
+
+
+@media (max-width: 1025px) {
+    .card-serv-open {
+        height: 22vw;
+    }
+
+    .card-serv-text {
+        font-size: 1.55vw;
+    }
+
+    .sec-servis .btn_white {
+        font-size: 22px;
+    }
+
+}
+
+
+
+/* Para tablets e dispositivos de tamanho médio */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+        /* Outros ajustes para dispositivos médios */
+    }
+}
+
+
+
+/* Para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* Outros ajustes para telas pequenas */
+    }
+
+    .sec-servis h2 {
+        font-size: 6.8vw;
+    }
+
+    .card-01,
+    .card-02 {
+        display: none;
+    }
+
+    .card-serv-mobile.csv-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: 25px 0px;
+        padding: 15px;
+        box-shadow: #00000057 -1px 4px 8px 0px;
+    }
+
+    .card-serv-title {
+        font-size: 3.35vw;
+    }
+
+    .car-textmobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-serv-text {
+        font-size: 3.25vw;
+        text-align: center;
+    }
+
+    .icons {
+        font-size: 10vw;
+    }
+
+
+}
+
+
+@media (max-width: 550px) {
+    .sec-servis h2 {
+        font-size: 7.8vw;
+ 
+    }
+}
+
+
+@media (max-width: 450px) {
+    .card-serv-title {
+        font-size: 4.35vw;
+    }
+
+    .card-serv-text {
+        font-size: 4.25vw;
+        text-align: center;
+    }
+}

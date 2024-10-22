@@ -1,0 +1,157 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    background-color: #f0f0f0;
+    /* Outros estilos globais */
+}
+
+:root {
+    --base1: #01044e;
+    --base3: #ed8534;
+    --base4: #ffffff;
+    --base5: #000000;
+    --base6: #d9d8d5;
+    --base7: #fdbe01;
+    --textsWhite: #ffffff;
+    --colorNone: #4a4a4a;
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+
+header {
+    background: linear-gradient(356deg, var(--base1), var(--base5));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+header .particles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+header canvas.particles-js-canvas-el {
+    position: absolute;
+    z-index: 0;
+}
+
+header .centro {
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.esquerdo, .direito {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 0px 3vw;
+    align-items: center;
+    color: var(--textsWhite);
+    height: 100vh;
+    justify-content: center;
+}
+
+img.frame1 {
+    width: 47vw;
+    top: 74px;
+    position: relative;
+}
+
+
+.esquerdo{
+    gap: 2vw;
+}
+
+h1, h1 span{
+    font-size: 2.9vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 1.9vw;
+    font-style: italic;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+
+.name-email-layer {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+}
+
+.lay-email {
+    display: flex;
+    gap: 1vw;
+    width: 100%;
+    flex-direction: column;
+}
+
+.lay-email input {
+    width: -webkit-fill-available;
+    
+}
+
+header form input {
+    padding: 0.3vw;
+    background-color: var(--base4);
+    border-style: none;
+    outline: none;
+    color: var(--base1);
+    border-radius: 3px;
+    font-size: 1.8vw;
+    width: 16vw;
+}
+
+header form input[type="submit"] {
+    background-color: var(--base7);
+    color: var(--textsWhite);
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+    color: var(--base1);
+    font-weight: bold;
+}
+
+header form input[type="submit"]:hover {
+    background-color: #969594;
+    transition: 200ms;
+}
