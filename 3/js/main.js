@@ -321,7 +321,7 @@ ajustBtns(); // Chamada inicial para configurar os eventos corretamente ao carre
 
 
 
-
+/*
 
 //carroceu
 const carouselItems = document.querySelector(".carousel-items")
@@ -340,6 +340,7 @@ nextButton.addEventListener("click", (() => {
         carouselItems.style.transform = `translateX(-${100 * currentIndex / 1.5}%)`)
 }
 ));
+*/
 
 
 for (var e = document.getElementsByClassName("accordion-item"), t = 0; t < e.length; t++)
@@ -354,7 +355,7 @@ function n(e) {
 const cardServ1 = document.querySelectorAll('.csv1');
 const cardServ2 = document.querySelectorAll('.csv2');
 
-document.querySelector('.cd1').addEventListener('mouseenter', () => {
+document.querySelector('._578').addEventListener('mouseenter', () => {
     cardServ1.forEach(element => {
         element.classList.add('card-serv-open');
     });
@@ -364,7 +365,7 @@ document.querySelector('.cd1').addEventListener('mouseenter', () => {
 });
 
 
-document.querySelector('.cd2').addEventListener('mouseenter', () => {
+document.querySelector('._579').addEventListener('mouseenter', () => {
     cardServ2.forEach(element => {
         element.classList.add('card-serv-open');
     });
@@ -378,7 +379,7 @@ document.querySelector('.cd2').addEventListener('mouseenter', () => {
 
 
 //desescrever texto e reescrever
-const texts = ["Abertura de empresa simples e rápido!", "Transforme sua ideia em realidade."];
+const texts = ["Abertura de empresa simples e rápido!", "Transforme sua ideia em realidade"];
 let currentTextIndex = 0;
 const element = document.getElementById('animatedText');
 let index = 0;

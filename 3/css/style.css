@@ -8,6 +8,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -71,41 +72,47 @@ header .centro {
     justify-content: space-between;
 }
 
-.esquerdo, .direito {
+.esquerdo,
+.direito {
     display: flex;
     width: 50%;
     flex-direction: column;
     padding: 0px 3vw;
     align-items: center;
     color: var(--textsWhite);
-    height: 100vh;
+    height: 57vw;
     justify-content: center;
 }
 
 img.frame1 {
-    width: 47vw;
-    top: 74px;
+    width: 54vw;
+    top: 30px;
     position: relative;
 }
 
 
-.esquerdo{
+.logo {
+    width: 25vw;
+}
+
+.esquerdo {
     gap: 2vw;
 }
 
-h1, h1 span{
+h1,
+h1 span {
     font-size: 2.9vw;
     text-align: center;
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     font-size: 1.9vw;
     font-style: italic;
     text-align: center;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,7 +134,7 @@ form{
 
 .lay-email input {
     width: -webkit-fill-available;
-    
+
 }
 
 header form input {
@@ -154,4 +161,593 @@ header form input[type="submit"] {
 header form input[type="submit"]:hover {
     background-color: #969594;
     transition: 200ms;
+}
+
+
+/*-------------Section passos-----------*/
+.sec-passos {
+    background-image: url('./../imgs/bg-01.png');
+    background-size: cover;
+}
+
+
+h3,
+h3 b {
+    font-size: 3vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--base1);
+    font-weight: bold;
+}
+
+.sec-passos .passos-abrir-empresa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-passos .step-progress {
+    display: flex;
+    align-items: center;
+}
+
+.sec-passos .step,
+.sec-passos .numPas {
+    border-style: solid;
+    border-color: #474750;
+    border-radius: 100px;
+    padding: 5px 5px;
+    transition: all 0.3s ease;
+}
+
+.sec-passos .step:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.sec-passos .bar {
+    width: 80px;
+    height: 10px;
+    background-color: #474750;
+    transition: all 0.3s ease;
+}
+
+.sec-passos .bar:hover {
+    background-color: #02033e;
+}
+
+.sec-passos .os-passos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.sec-passos .pas {
+    display: flex;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    box-shadow: black 0px 0px 10px 0px;
+    margin: 18px 0px;
+    width: 84%;
+    background-color: var(--base4);
+    justify-content: center;
+}
+
+.sec-passos .numPas {
+    padding: 5px 10px;
+}
+
+.sec-passos .text-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.sec-passos .lay_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.btn_white {
+    transition: 500ms;
+    background-color: var(--base1);
+    color: var(--textsWhite);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    padding: 10px;
+    animation: pulseButton 2s infinite;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.sec-passos .passos-abrir-empresa {
+    display: none;
+}
+
+.sec-passos .passos-abrir-empresa-desktop {
+    display: flex;
+}
+
+@keyframes pulsededo {
+    0% {
+        transform: scale(1) rotate(332deg);
+
+    }
+
+    50% {
+        transform: scale(1.1) rotate(332deg);
+
+    }
+
+    100% {
+        transform: scale(1) rotate(332deg);
+
+    }
+}
+
+.sec-passos .fa-hand-pointer {
+    display: none;
+    position: absolute;
+    font-size: 40px;
+    transform: rotate(332deg);
+    margin: -36px -10px;
+    color: var(--base1);
+    animation: pulsededo 700ms infinite;
+}
+
+
+
+
+.sec-passos .passos-abrir-empresa {
+    display: none;
+}
+
+.sec-passos .passos-abrir-empresa-desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec-passos .bar {
+    background-color: var(--base1);
+}
+
+section {
+    padding: 80px 5px 0px 5px !important;
+}
+
+.sec-passos .os-passos {
+    display: flex;
+    margin: 10px 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sec-passos .pas {
+    gap: 1vw;
+    width: 85%;
+    margin: 1vw 2vw;
+    z-index: 0;
+    background-color: var(--base4);
+    width: 22vw;
+    height: 22vw;
+}
+
+.sec-passos .text-title {
+    font-size: 1.7vw;
+}
+
+.sec-passos .text-descri {
+    font-size: 1.6vw;
+    color: var(--colorNone);
+}
+
+.step i {
+    font-size: 23px;
+    width: 32px;
+    text-align: center;
+    color: var(--base1);
+}
+
+.sec-passos .step,
+.sec-passos .numPas {
+    border-color: var(--base1);
+}
+
+.sec-passos .step-progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-passos .step {
+    transform: none;
+    cursor: pointer;
+    background-color: var(--base4);
+    z-index: 1;
+}
+
+.sec-passos .step,
+.sec-passos .numPas {
+    padding: 14px 10px;
+    background-color: var(--base4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.lin,
+.lin-3 {
+    width: 10px;
+    background-color: var(--base1);
+    height: 52px;
+    position: relative;
+
+    z-index: 0;
+    right: 38px;
+    top: 30px;
+}
+
+.lin-3 {
+    height: 72px;
+    top: 39px;
+}
+
+.sec-passos .numPas {
+    padding: 5px 10px;
+    font-size: 1.5vw;
+}
+
+.sec-passos .bar {
+    width: 20vw;
+}
+
+.sec-passos .bar-3 {
+    width: 0px;
+}
+
+.pas1,
+.pas2 {
+    top: 0;
+    position: relative;
+}
+
+/*===============================================*/
+
+
+
+/*------------section persuasivo---------------*/
+
+.per-direito,
+.per-esquerdo {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px 0px 50px;
+}
+
+
+.sec-persuasivo {
+    background-image: url('./../imgs/bg-02.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.sec-persuasivo .lay_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.ajust-svg {
+    width: 100%;
+    height: 30px;
+    transform: rotate(180deg);
+}
+
+.elementor-shape-fill {
+    fill: #f0f0f0;
+}
+
+.per-ajust {
+    display: flex;
+    flex-direction: row;
+}
+
+.per-h3,
+.per-h3 b {
+    color: var(--colorNone);
+    text-transform: uppercase;
+    margin: 0px;
+    text-align: start;
+}
+
+.per-h3 b {
+    color: var(--base1);
+}
+
+.lay-frame2 {
+    width: 45vw;
+    height: 40vw;
+}
+
+
+
+.frame-2 {
+    background-image: url(../imgs/frame-2-desktop.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+    right: 4vw;
+    position: relative;
+}
+
+.lay-pers {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 50px 0px 10px;
+    justify-content: flex-start;
+}
+
+.text1-pers span,
+.text2-pers p {
+    color: var(--colorNone);
+    font-size: 1.7vw;
+}
+
+i.fa-solid.fa-circle-check {
+    font-size: 2vw;
+}
+
+.text2-pers div:nth-child(1) {
+    margin-bottom: 3vw;
+}
+
+.text2-pers span {
+    color: var(--base1);
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+/*======================================*/
+
+/*serviços----------------------*/
+
+#animatedText {
+    min-height: 7vw;
+}
+
+._256 {
+    margin-bottom: 30px;
+}
+
+._578,
+._579 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+._888 {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 45px;
+}
+
+.img1 {
+    width: 100%;
+    background-color: #01044e17;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+i.fa-solid.fa-rocket.icons,
+.fa-magnifying-glass-chart,
+.fa-person-burst,
+.fa-toolbox,
+.fa-headset,
+.fa-file-invoice-dollar {
+    font-size: 3.5vw;
+    color: var(--base1);
+}
+
+.card-serv1 {
+    width: 100%;
+    height: 0vw;
+    display: flex;
+    padding: 0px 14px;
+    box-shadow: #00000017 -1px 2px 5px 1px;
+    border-radius: 0px 0px 10px 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: 500ms;
+    background-color: var(--base4);
+}
+
+span.card-serv-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 11px 0px;
+}
+
+p.card-serv-text {
+    font-size: 1.3vw;
+    color: var(--colorNone);
+}
+
+
+._889 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card-serv2 {
+    width: 100%;
+    height: 0vw;
+    display: flex;
+    padding: 0px 14px;
+    box-shadow: #00000017 0px -5px 10px 1px;
+    border-radius: 10px 10px 0px 0px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 15px 0px 0px 0px;
+    transition: 500ms;
+    background-color: var(--base4);
+}
+
+
+.card-serv-open {
+    height: 14vw;
+    transition: 500ms;
+}
+
+.lay_btn {
+    text-align: center;
+}
+
+
+._257 {
+    display: none;
+}
+
+/*=============================*/
+
+
+/*Vantagens-------------*/
+.sec-vantag {
+    background-image: url('./../imgs/bg-01.png');
+    background-size: cover;
+}
+
+.sec-vantag .title h4 {
+    text-align: center;
+    font-size: 22px;
+    color: var(--colorNone);
+}
+
+.sec-vantag .vanteg-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 12px 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sec-vantag .vanteg-card {
+    background-image: url(./../imgs/logo-azul-opacity_10.png);
+    background-repeat: no-repeat;
+    background-position-x: -95px;
+    background-position-y: 10px;
+    background-size: 213px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    box-shadow: #05084ea3 0px 0px 14px 0px;
+    border-radius: 10px;
+    margin: 20px 20px;
+    background-color: var(--base4);
+    width: 25vw;
+    height: 20vw;
+    justify-content: center;
+}
+
+.sec-vantag .vanteg-card i {
+    font-size: 3.5vw;
+    margin: 15px 0px;
+    color: var(--base1);
+}
+
+.sec-vantag .vanteg-card span {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: var(--base1);
+}
+
+
+.sec-vantag .vanteg-card p {
+    font-size: 1.3vw;
+    margin: 15px 0px;
+    color: var(--colorNone);
+    font-weight: bold;
+}
+
+/*========================*/
+
+/*clietes----*/
+.testimonial-slider {
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
