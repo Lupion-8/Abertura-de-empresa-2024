@@ -58,4 +58,24 @@
         width: 38vw;
         height: 34vw;
     }
+    /*==============================*/
+
+
+    /*clientes--------*/
+    .item {
+        width: 45vw;
+        height: 60vw;
+    }
+
+    .text_fulano {
+        font-size: 2.1vw;
+    }
+
+    .name_fulano {
+        font-size: 2.7vw;
+    }
+    .empre_fulano {
+        font-size: 1.8vw;
+    }
+
 }

@@ -420,5 +420,30 @@
     .sec-vantag .vanteg-card span {
         font-size: 20px;
     }
+    /*============================*/
+
+
+    /*clientes-------------*/
+
+    .item {
+        width: 400px;
+        height: 430px;
+    }
+    .ft_fulano {
+        width: 70px;
+    }
+    .star {
+        font-size: 2vw;
+        text-shadow: 0 0 4px black;
+    }
+    .text_fulano {
+        font-size: 18px;
+    }
+    .empre_fulano{
+        font-size: 16px;
+    }
+    .name_fulano {
+        font-size: 22px;
+    }
 
 }
