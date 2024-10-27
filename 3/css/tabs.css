@@ -1,4 +1,4 @@
-@media (max-width: 1024px) and (min-height: 800px) {
+@media (min-width: 768px) and (min-height: 800px) {
     ._256 {
         display: none;
     }
@@ -9,5 +9,56 @@
     }
     ._578, ._579 {
         flex-wrap: wrap;
+    }
+
+    .card-serv-open {
+        height: 20vw;
+    }
+
+    ._888 {
+        width: 275px;
+        margin: 20px 30px;
+    }
+
+    
+    span.card-serv-title {
+        font-size: 1.9vw;
+    }
+
+    p.card-serv-text {
+        font-size: 1.8vw;
+    }
+
+    .item {
+        width: 30vw;
+        height: 45vw;
+    }
+
+    .name_fulano {
+        font-size: 1.9vw;
+    }
+
+    .text_fulano {
+        font-size: 1.6vw;
+    }
+
+    .empre_fulano {
+        font-size: 1.5vw;
+    }
+
+    .ft_fulano {
+        width: 7vw;
+    }
+
+    .accordion-title {
+        text-align: start;
+    }
+
+    .accordion-content p {
+        font-size: 19px;
+    }
+
+    .accordion-item {
+        width: 85%;
     }
 }

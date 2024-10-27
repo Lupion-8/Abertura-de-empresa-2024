@@ -159,7 +159,7 @@ header form input[type="submit"] {
 }
 
 header form input[type="submit"]:hover {
-    background-color: #969594;
+    background-color: #dbbc09;
     transition: 200ms;
 }
 
@@ -672,7 +672,7 @@ h4 {
     align-items: center;
     padding: 15px;
     text-align: center;
-    box-shadow: #05084ea3 0px 0px 14px 0px;
+    box-shadow: #05084e38 0px 0px 14px 0px;
     border-radius: 10px;
     margin: 20px 20px;
     background-color: var(--base4);
@@ -715,10 +715,10 @@ h4 {
 .carousel {
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-    height: 500px;
-    position: relative;
     padding: 5vw;
+    position: relative;
 }
 
 .carousel-item {
@@ -734,7 +734,7 @@ h4 {
     align-items: center;
     background-color: #f4f4f4;
     width: 25vw;
-    height: 33vw;
+    height: 25vw;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
@@ -742,7 +742,7 @@ h4 {
 }
 
 .ft_fulano {
-    width: 6vw;
+    width: 5vw;
     border-radius: 50vw;
     border-style: solid;
     border-color: var(--base1);
@@ -750,7 +750,7 @@ h4 {
 }
 
 .name_fulano {
-    font-size: 1.7vw;
+    font-size: 1.1vw;
     font-weight: bold;
     border-bottom-style: solid;
     border-block-width: 1px;
@@ -765,7 +765,7 @@ h4 {
 }
 
 .text_fulano {
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: var(--colorNone);
 }
 

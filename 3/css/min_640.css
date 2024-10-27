@@ -6,6 +6,9 @@
     .ajust-svg {
         display: none;
     }
+    h4 {
+        font-size: 5vw;
+    }
 
 
     /*------------header------------*/
@@ -21,7 +24,7 @@
     }
 
     .logo {
-        width: 30vw;
+        width: 40vw;
     }
 
     h1,
@@ -39,9 +42,9 @@
     }
 
     header form input {
-        font-size: 4vw;
+        font-size: 5vw;
         width: 40vw;
-        padding: 0.5vw;
+        padding: 1vw;
     }
 
     .lay_form {
@@ -226,9 +229,13 @@
     /*=========================*/
 
     /*client---------*/
+    .carousel {
+        padding: 15vw 5vw;
+    }
+    
     .item {
         width: 65vw;
-        height: 120vw;
+        height: 115vw;
     }
 
     .ft_fulano {
