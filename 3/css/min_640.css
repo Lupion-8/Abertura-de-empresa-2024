@@ -3,6 +3,10 @@
         font-size: 4vw;
     }
 
+    .ajust-svg {
+        display: none;
+    }
+
 
     /*------------header------------*/
     .esquerdo,
@@ -197,6 +201,7 @@
     .card-serv1 {
         justify-content: center;
     }
+
     /*============================*/
 
     /*vantagens--------------*/
@@ -216,6 +221,51 @@
     .sec-vantag .vanteg-card i {
         font-size: 7.5vw;
 
+    }
+
+    /*=========================*/
+
+    /*client---------*/
+    .item {
+        width: 65vw;
+        height: 120vw;
+    }
+
+    .ft_fulano {
+        width: 15vw;
+        margin: 2vw;
+    }
+
+    .name_fulano {
+        font-size: 4.3vw;
+    }
+
+    .empre_fulano {
+        font-size: 2.8vw;
+    }
+
+    .star {
+        font-size: 5vw;
+    }
+
+    .text_fulano {
+        font-size: 4vw;
+    }
+
+    .client-chamada {
+        gap: 7vw;
+    }
+    /*=======================*/
+
+    /*faq*/
+    .accordion-item {
+        border-top: 1px solid #ccc;
+        width: 90%;
+    }
+
+    .accordion-title {
+        text-align: start;
+        font-size: 4vw;
     }
 
 }

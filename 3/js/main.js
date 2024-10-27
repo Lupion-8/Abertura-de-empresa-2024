@@ -204,24 +204,6 @@ document.querySelector('.wapp').addEventListener('click', () => {
 });
 
 
-
-
-/*
-document.querySelector('header form input[type="submit"] ').addEventListener('click', (event) => {
-    event.preventDefault();  // Impede o envio do formulário
-    const n = document.querySelector('.name').value
-    const t = document.querySelector('.telefone').value
-    const e = document.querySelector('.email').value
-    if (n.length > 1 && e.length > 5) {
-        window.location.assign('/successful');
-    } else {
-        alert('Formulários invalido!');
-    }
-
-});
-*/
-
-
 setTimeout(() => {
     gsap.to(".wapp", {
         x: 0,
@@ -274,8 +256,108 @@ function fecharLogin() {
     document.querySelector('.lay_form').style.display = 'none'; // Esconde o formulário
 }
 
-// Fecha o formulário ao clicar fora dele (opcional)
-//document.getElementById('overlay').addEventListener('click', fecharLogin);
+//passos mobile
+const step1 = document.querySelector('.step-1');
+const step2 = document.querySelector('.step-2');
+const step3 = document.querySelector('.step-3');
+
+const bar1 = document.querySelector('.bar-1');
+const bar2 = document.querySelector('.bar-2');
+
+const num = document.querySelector('.numPas');
+const textTitle = document.querySelector('.text-title');
+const textDescri = document.querySelector('.text-descri');
+const dedinhoMagico = document.querySelector('.fa-hand-pointer');
+
+let startX;
+
+const swipeArea = document.querySelector('.pas');
+
+// Variável para armazenar o passo atual
+let currentStep = 1;
+
+function setActiveStep(stepNum) {
+    const steps = [step1, step2, step3];
+    const bars = [bar1, bar2];
+
+    // Atualizar as cores dos steps e barras
+    steps.forEach((step, index) => {
+        step.style.borderColor = index < stepNum ? '#02033e' : '#474750';
+    });
+    bars.forEach((bar, index) => {
+        bar.style.backgroundColor = index < stepNum - 1 ? '#02033e' : '#474750';
+    });
+
+    // Atualizar o conteúdo de acordo com o passo
+    switch (stepNum) {
+        case 1:
+            setdata(1, 'Reunião de alinhamento', 'Atendimento personalizado, para entendermos melhor sobre seu projeto e oferecermos a melhor solução.');
+            break;
+        case 2:
+            setdata(2, 'Envio de documentação', 'Recebimento de toda a documentação de forma digital. Você não precisa sair do conforto de sua casa.');
+            dedinhoMagico.style.display = "none";
+            break;
+        case 3:
+            setdata(3, 'Sonho realizado!', 'Oba! Seu CNPJ saiu e sua empresa já tá pronta pra te receber e te acompanhar nessa jornada.');
+
+            break;
+    }
+
+    // Atualizar a variável currentStep
+    currentStep = stepNum;
+
+}
+
+function setdata(n, t, tx) {
+    num.textContent = n;
+    textTitle.textContent = t;
+    textDescri.textContent = tx;
+}
+
+// Iniciar com o passo 1 ativo
+setActiveStep(1);
+
+// Eventos de clique nos steps
+step1.addEventListener('click', () => setActiveStep(1));
+step2.addEventListener('click', () => setActiveStep(2));
+step3.addEventListener('click', () => setActiveStep(3));
+
+// Evento ao iniciar o toque
+swipeArea.addEventListener('touchstart', (e) => {
+    const touch = e.touches[0];
+    startX = touch.clientX;
+});
+
+// Evento ao terminar o toque
+swipeArea.addEventListener('touchend', (e) => {
+    const touch = e.changedTouches[0];
+    const endX = touch.clientX;
+
+    handleSwipe(startX, endX);
+});
+
+// Função para calcular a direção do swipe (apenas esquerda/direita)
+function handleSwipe(startX, endX) {
+    const diffX = endX - startX;
+
+    // Limite mínimo para considerar um deslize
+    const minSwipeDistance = 70; // Ajuste conforme necessário
+
+    if (Math.abs(diffX) > minSwipeDistance) {
+        if (diffX > 0) {
+            // Deslizou para a direita (passo anterior)
+            if (currentStep > 1) {
+                setActiveStep(currentStep - 1);
+            }
+        } else {
+            // Deslizou para a esquerda (próximo passo)
+            if (currentStep < 3) {
+                setActiveStep(currentStep + 1);
+            }
+        }
+    }
+}
+
 
 
 // Debounce function para limitar chamadas frequentes
@@ -318,29 +400,6 @@ window.addEventListener('resize', debouncedAjustBtns);
 
 ajustBtns(); // Chamada inicial para configurar os eventos corretamente ao carregar
 
-
-
-
-/*
-
-//carroceu
-const carouselItems = document.querySelector(".carousel-items")
-    , prevButton = document.querySelector(".carousel-prev")
-    , nextButton = document.querySelector(".carousel-next");
-let currentIndex = 0;
-
-prevButton.addEventListener("click", (() => {
-    currentIndex > 0 && (currentIndex--,
-        carouselItems.style.transform = `translateX(-${100 * currentIndex / 1.5}%)`)
-}
-));
-
-nextButton.addEventListener("click", (() => {
-    currentIndex < 3 && (currentIndex++,
-        carouselItems.style.transform = `translateX(-${100 * currentIndex / 1.5}%)`)
-}
-));
-*/
 
 
 for (var e = document.getElementsByClassName("accordion-item"), t = 0; t < e.length; t++)
@@ -424,6 +483,7 @@ function writeText(callback) {
 document.querySelector(".wapp").addEventListener("click", (() => {
     document.querySelector(".pop").style.visibility = "visible"
 }
+
 )),
     document.querySelector(".fa-times").addEventListener("click", (() => {
         document.querySelector(".pop").style.visibility = "hidden"
@@ -449,20 +509,6 @@ telef.forEach(element => {
 });
 //=================================================================================================================//
 
-/*const forms = document.querySelectorAll('form');
-forms.forEach(form => {
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const formData = new FormData(form);
-        const formulario = Object.fromEntries(formData.entries()); // Converte FormData para um objeto simples
-
-        const formId = form.id; // Pega o id do formulário
-        console.log(formulario);
-
-        window.location.assign('/successful');
-    });
-});
-*/
 
 function cbOrbt(){
     window.location.assign('./successful');

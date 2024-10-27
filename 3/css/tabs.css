@@ -1,0 +1,13 @@
+@media (max-width: 1024px) and (min-height: 800px) {
+    ._256 {
+        display: none;
+    }
+
+    ._257 {
+        display: flex;
+        flex-direction: column;
+    }
+    ._578, ._579 {
+        flex-wrap: wrap;
+    }
+}

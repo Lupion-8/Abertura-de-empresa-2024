@@ -5,25 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abertura de empresa</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css?v=01" />
-    <link rel="stylesheet" type="text/css" href="./css/more_1366.css?v=01" />
-    <link rel="stylesheet" type="text/css" href="./css/min_912.css" />
-    <link rel="stylesheet" type="text/css" href="./css/min_640.css" />
-    <link rel="stylesheet" type="text/css" href="./css/min_740.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/more_1366.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/min_912.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/min_640.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/min_740.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/min_375.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/tabs.css"/>
 
 
 
-    <link rel="stylesheet" type="text/css" href="./css/faq.css?v=01" />
     <link rel="stylesheet" type="text/css" href="./css/footer.css?v=01" />
     <link rel="stylesheet" type="text/css" href="./css/nav.css?v=01" />
     <link rel="stylesheet" type="text/css" href="./css/wpp.css?v=01" />
-
-
-
-
-
-
-
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -148,110 +142,6 @@
                 <button class="btn_white">Entrar em contato!</button>
             </a>
         </div>
-
-        <script>
-            const step1 = document.querySelector('.step-1');
-            const step2 = document.querySelector('.step-2');
-            const step3 = document.querySelector('.step-3');
-
-            const bar1 = document.querySelector('.bar-1');
-            const bar2 = document.querySelector('.bar-2');
-
-            const num = document.querySelector('.numPas');
-            const textTitle = document.querySelector('.text-title');
-            const textDescri = document.querySelector('.text-descri');
-            const dedinhoMagico = document.querySelector('.fa-hand-pointer');
-
-            let startX;
-
-            const swipeArea = document.querySelector('.pas');
-
-            // Variável para armazenar o passo atual
-            let currentStep = 1;
-
-            function setActiveStep(stepNum) {
-                const steps = [step1, step2, step3];
-                const bars = [bar1, bar2];
-
-                // Atualizar as cores dos steps e barras
-                steps.forEach((step, index) => {
-                    step.style.borderColor = index < stepNum ? '#02033e' : '#474750';
-                });
-                bars.forEach((bar, index) => {
-                    bar.style.backgroundColor = index < stepNum - 1 ? '#02033e' : '#474750';
-                });
-
-                // Atualizar o conteúdo de acordo com o passo
-                switch (stepNum) {
-                    case 1:
-                        setdata(1, 'Reunião de alinhamento', 'Atendimento personalizado, para entendermos melhor sobre seu projeto e oferecermos a melhor solução.');
-                        break;
-                    case 2:
-                        setdata(2, 'Envio de documentação', 'Recebimento de toda a documentação de forma digital. Você não precisa sair do conforto de sua casa.');
-                        dedinhoMagico.style.display = "none";
-                        break;
-                    case 3:
-                        setdata(3, 'Sonho realizado!', 'Oba! Seu CNPJ saiu e sua empresa já tá pronta pra te receber e te acompanhar nessa jornada.');
-
-                        break;
-                }
-
-                // Atualizar a variável currentStep
-                currentStep = stepNum;
-
-            }
-
-            function setdata(n, t, tx) {
-                num.textContent = n;
-                textTitle.textContent = t;
-                textDescri.textContent = tx;
-            }
-
-            // Iniciar com o passo 1 ativo
-            setActiveStep(1);
-
-            // Eventos de clique nos steps
-            step1.addEventListener('click', () => setActiveStep(1));
-            step2.addEventListener('click', () => setActiveStep(2));
-            step3.addEventListener('click', () => setActiveStep(3));
-
-            // Evento ao iniciar o toque
-            swipeArea.addEventListener('touchstart', (e) => {
-                const touch = e.touches[0];
-                startX = touch.clientX;
-            });
-
-            // Evento ao terminar o toque
-            swipeArea.addEventListener('touchend', (e) => {
-                const touch = e.changedTouches[0];
-                const endX = touch.clientX;
-
-                handleSwipe(startX, endX);
-            });
-
-            // Função para calcular a direção do swipe (apenas esquerda/direita)
-            function handleSwipe(startX, endX) {
-                const diffX = endX - startX;
-
-                // Limite mínimo para considerar um deslize
-                const minSwipeDistance = 70; // Ajuste conforme necessário
-
-                if (Math.abs(diffX) > minSwipeDistance) {
-                    if (diffX > 0) {
-                        // Deslizou para a direita (passo anterior)
-                        if (currentStep > 1) {
-                            setActiveStep(currentStep - 1);
-                        }
-                    } else {
-                        // Deslizou para a esquerda (próximo passo)
-                        if (currentStep < 3) {
-                            setActiveStep(currentStep + 1);
-                        }
-                    }
-                }
-            }
-
-        </script>
     </section>
 
 
@@ -481,51 +371,49 @@
 
                 <div class="_888">
                     <div class="img1">
-                        <i class="fa-solid fa-rocket icons"></i>
+                        <i class="fa-solid fa-file-invoice-dollar icons"></i>
                     </div>
 
                     <div class="card-serv1 csv1 card-serv-open">
                         <span class="card-serv-title">
-                            Abertura rápida e descomplicada
+                            Orientação fiscal
                         </span>
                         <p class="card-serv-text">
-                            Simplificamos o processo de abertura de empresas, garantindo rapidez e eficiência.
-                            Comece
-                            sua
-                            jornada empreendedora livre de preocupações burocráticas.
+                            Garanta que suas obrigações fiscais estejam sempre em dia desde o início. Com nossa
+                            orientação, você evita problemas futuros e assegura total conformidade com a legislação
+                            vigente.
                         </p>
                     </div>
                 </div>
 
                 <div class="_888">
                     <div class="img1">
-                        <i class="fa-solid fa-person-burst icons"></i>
+                        <i class="fa-solid fa-headset icons"></i>
                     </div>
 
                     <div class="card-serv1 csv1 card-serv-open">
                         <span class="card-serv-title">
-                            Assessoria personalizada
+                            Suporte contínuo
                         </span>
                         <p class="card-serv-text">
-                            Conte com nossa equipe de especialistas para um suporte personalizado em cada etapa do
-                            processo. Orientamos você na tomada de decisões estratégicas, acelerando o crescimento
-                            do seu negócio.
+                            Estamos ao seu lado em cada fase do seu negócio, desde a constituição até o crescimento
+                            sustentável. Conte com nosso suporte contínuo para alcançar e manter o sucesso.
                         </p>
                     </div>
                 </div>
 
                 <div class="_888">
                     <div class="img1">
-                        <i class="fa-solid fa-magnifying-glass-chart icons"></i>
+                        <i class="fa-solid fa-toolbox icons"></i>
                     </div>
 
                     <div class="card-serv1 csv1 card-serv-open">
                         <span class="card-serv-title">
-                            Expertise comprovada
+                            Planejamento tributário permanente
                         </span>
                         <p class="card-serv-text">
-                            Beneficie-se de nossa vasta experiência em abertura de empresas. Nossos muitos casos de
-                            sucesso atestam a qualidade do nosso trabalho!
+                            Otimize sua carga tributária com nosso planejamento personalizado. Identificamos
+                            oportunidades de economia fiscal para reduzir seus custos e maximizar benefícios.
                         </p>
                     </div>
                 </div>
@@ -601,9 +489,9 @@
         <div class="title">
             <h3>Veja o que os nossos clientes estão dizendo</h3>
         </div>
+        <!--
         <div class="roleta">
             <i class="fas fa-chevron-circle-down nav-button prev"></i>
-          
             <div class="carousel">
                 <div class="slide">
                     <div class="item">
@@ -692,18 +580,29 @@
             </div>
             <i class="fas fa-chevron-circle-down nav-button next"></i>
         </div>
+        -->
 
+
+        <div class="carousel-container">
+            <i id="prev"  class="fas fa-chevron-circle-down nav-button prev"></i>
+            <div id="carousel" class="carousel">
+                <!-- Os cards serão inseridos dinamicamente aqui -->
+            </div>
+            <i id="next" class="fas fa-chevron-circle-down nav-button next"></i>
+        </div>
+        
         <div class="client-chamada">
-            <h2>Estamos prontos para te atender</h2>
-            <span>Não se preocupe, você não estará assumindo nenhum compromisso com a<br> <b>Controller Contadores e
+            <span class="sp1">Estamos prontos para te atender</span>
+            <div class="lay_btn">
+                <a class="page-scroll" href="">
+                    <button class="btn_white">Entrar em contato</button>
+                </a>
+            </div>
+            <span class="sp2">Não se preocupe, você não estará assumindo nenhum compromisso com a<br> <b>Controller Contadores e
                     Auditores Associados</b>.</span>
         </div>
 
-        <div class="lay_btn">
-            <a class="page-scroll" href="">
-                <button class="btn_white">Entrar em contato</button>
-            </a>
-        </div>
+       
     </section>
 
 
@@ -711,8 +610,8 @@
 
     <section class="sec-duvida white-section">
         <div class="title">
-            <h2>Restou alguma dúvida?</h2>
-            <h3>Veja as perguntas mais comuns</h3>
+            <h3>Restou alguma dúvida?</h3>
+            <h4>Veja as perguntas mais comuns em uma abertura de empresa</h4>
         </div>
 
         <div class="ganbiarra">

@@ -115,7 +115,7 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     gap: 1vw;
 }
 
@@ -233,7 +233,7 @@ h3 b {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    box-shadow: black 0px 0px 10px 0px;
+    box-shadow: #0000003d 0px 0px 10px 0px;
     margin: 18px 0px;
     width: 84%;
     background-color: var(--base4);
@@ -323,7 +323,7 @@ h3 b {
 }
 
 section {
-    padding: 80px 5px 0px 5px !important;
+    padding: 50px 5px 0px 5px !important;
 }
 
 .sec-passos .os-passos {
@@ -646,7 +646,7 @@ p.card-serv-text {
     background-size: cover;
 }
 
-.sec-vantag .title h4 {
+h4 {
     text-align: center;
     font-size: 22px;
     color: var(--colorNone);
@@ -705,41 +705,26 @@ p.card-serv-text {
 
 /*clietes----*/
 
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .carousel {
     display: flex;
-    overflow-x: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    width: 100%;
-    cursor: grab; /* Mãozinha aberta */
-    user-select: none; /* Impede a seleção de texto */
-}
-
-
-
-.carousel.active {
-    cursor: grabbing; /* Mãozinha fechada */
-}
-.roleta {
-    display: flex;
-    align-items: center;
-}
-
-.slide {
-    display: flex;
-    transition: transform 0.3s ease;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 45px 0px;
+    overflow: hidden;
+    height: 500px;
+    position: relative;
+    padding: 5vw;
 }
 
-.ft_fulano {
-    width: 6vw;
-    border-radius: 50vw;
-    border-style: solid;
-    border-color: var(--base1);
-    border-width: 4px;
+.carousel-item {
+    width: 100%;
+    opacity: 0.3;
+    transition: transform 0.5s ease;
 }
 
 .item {
@@ -748,13 +733,20 @@ p.card-serv-text {
     justify-content: center;
     align-items: center;
     background-color: #f4f4f4;
-    width: 30vw;
-    height: 31vw;
-    min-width: 300px; /* Ajuste conforme necessário */
-    padding:10px;
+    width: 25vw;
+    height: 33vw;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     box-shadow: #0000004f 0px 0px 8px 0px;
+}
+
+.ft_fulano {
+    width: 6vw;
+    border-radius: 50vw;
+    border-style: solid;
+    border-color: var(--base1);
+    border-width: 4px;
 }
 
 .name_fulano {
@@ -766,7 +758,7 @@ p.card-serv-text {
     margin-bottom: 8px;
 }
 
-.star{
+.star {
     color: yellow;
     font-size: 22px;
     text-shadow: 0 0 4px black;
@@ -777,8 +769,29 @@ p.card-serv-text {
     color: var(--colorNone);
 }
 
-.empre_fulano{
+.empre_fulano {
     font-size: 1.1vw;
+}
+
+.carousel-item.center {
+    opacity: 1;
+    margin: 0 5vw;
+    transform: scale(1.1);
+}
+
+.carousel-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav-button {
@@ -794,11 +807,89 @@ p.card-serv-text {
 }
 
 .prev {
-    left: 10px;
+    left: 2vw;
     transform:  rotate(90deg);
 }
 
 .next {
-    right: 10px;
+    right: 2vw;
     transform: rotate(-90deg);
+}
+
+.client-chamada {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.sp1{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.sp1 .sp2{
+    font-size: 22px;
+}
+
+/*======================*/
+
+/*perguntas----*/
+
+.accordion-item.expanded .accordion-content {
+    display: block;
+}
+
+.accordion {
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accordion-item {
+    border-top: 1px solid #ccc;
+    width: 75%;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.accordion-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d0a64;
+}
+
+.accordion-icon {
+    font-size: 1.2em;
+    color: #888;
+    transition: transform .3s;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+}
+
+.farrr {
+    color: var(--base1);
+}
+
+.accordion-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #6A6972;
+    margin: 0;
+    font-family: 'arial';
 }
