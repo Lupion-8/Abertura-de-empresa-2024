@@ -1,0 +1,88 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media (max-width: 912px) {
+
+    .esquerdo,
+    .direito {
+        height: auto;
+    }
+
+    img.frame1 {
+        width: 64vw;
+        top: 43px;
+        left: 6vw;
+    }
+
+    .esquerdo {
+        padding: 0px 0vw 0px 03vw;
+    }
+
+    header form input {
+        font-size: 2vw;
+        width: 18vw;
+    }
+
+    /*================================*/
+
+    /*-----persuasiv----------*/
+    ._888 {
+        width: 320px;
+        margin: 0px 30px;
+    }
+
+    .card-serv2 {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    span.card-serv-title {
+        font-size: 2.3vw;
+    }
+
+    p.card-serv-text {
+        font-size: 2vw;
+    }
+
+    .card-serv-open {
+        height: 30vw;
+    }
+    /*====================*/
+
+    /*vant----------*/
+    .sec-vantag .vanteg-card span {
+        font-size: 2.5vw;
+    }
+
+    .sec-vantag .vanteg-card p {
+        font-size: 2.3vw;
+    }
+  
+    .sec-vantag .vanteg-card {
+        width: 38vw;
+        height: 34vw;
+    }
+    /*==============================*/
+
+
+    /*clientes--------*/
+    .item {
+        width: 46vw;
+        height: 46vw;
+    }
+
+    .text_fulano {
+        font-size: 2.1vw;
+    }
+
+    .name_fulano {
+        font-size: 2.7vw;
+    }
+    .empre_fulano {
+        font-size: 1.8vw;
+    }
+
+}

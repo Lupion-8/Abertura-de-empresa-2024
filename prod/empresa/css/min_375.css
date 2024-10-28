@@ -1,0 +1,27 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@media (max-width: 375px) {
+
+    .text_fulano {
+        font-size: 3.2vw;
+    }
+
+    .nav-button {
+        font-size: 10vw;
+    }
+
+    .item {
+        height: 90vw;
+        min-width: 250px;
+    }
+
+    .nav-button {
+        margin-bottom: 20vw;
+    }
+
+}
