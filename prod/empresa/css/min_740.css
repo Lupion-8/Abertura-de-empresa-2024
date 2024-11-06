@@ -39,4 +39,8 @@
     .frame-2 {
         background-image: url(../imgs/frame-2-phone.png);
     }
+    .img1 {
+        border-radius: 10px 10px 0px 0px;
+    }
 }
+

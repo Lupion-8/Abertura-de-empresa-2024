@@ -22,4 +22,8 @@
         width: 282px;
         margin: 20px 27px;
     }
+
+    .img1 {
+        border-radius: 10px 10px 0px 0px;
+    }
 }
